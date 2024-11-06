@@ -6,6 +6,7 @@ import PointToPlaneDistance from './components/PointToPlaneDistance';
 import PointToLineDistance from './components/PointToLineDistance';
 import PlaneToPlaneDistance from './components/PlaneToPlaneDistance';
 import LineToLineDistance from './components/LineToLineDistance';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -35,4 +36,10 @@ function App() {
   );
 }
 
-export default App;
+export default function AppWithRouter() {
+  return (
+    <BrowserRouter basename="/GAAL-trab">
+      <App />
+    </BrowserRouter>
+  );
+}
